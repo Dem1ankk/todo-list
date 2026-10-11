@@ -9,9 +9,32 @@
 <body>
   <h1>TODO LIST</h1>
  <input id="input">
-  <button id="button">enter</button> 
+  <button id="button">enter</button> <b id="help">write something</b>
   <ul id="list">
 
   </ul>
+  <script>
+const input = document.querySelector("#input")
+const button = document.querySelector("#button")
+const list = document.querySelector("#list")
+const help = document.querySelector("#help")
+button.addEventListener('click',function(){
+const li = document.createElement("li")
+const text = input.value.trim()
+
+if(text===""){
+help.style.color="red"; 
+}
+
+else{
+help.style.color="black";   
+li.textContent = text
+list.append(li)
+input.value=""
+}
+
+ })
+</script>
 </body>
+
 </html>
