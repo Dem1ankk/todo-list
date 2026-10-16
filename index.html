@@ -5,16 +5,41 @@
   <meta charset="UTF-8"> 
   <meta name="viewport"  Content="width=device-width,initial-scale=1">
   <title>list</title>
-
+<style>
+.all{
+  display: flex;
+  align-items:center;   
+   border-radius: 20px;       
+  padding: 15px;
+flex-direction: column;
+background-color: rgb(17, 111, 117);
+box-shadow: 5px 10px 15px rgba(0, 0, 233, 0.800);
+max-width:fit-content;
+}
+body{
+   min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin: 0px;
+}
+</style>
 </head>
 
 <body>
-  <h1>TODO LIST</h1>
- <input id="input">
-  <button id="button">enter</button> <b id="help">write something</b>
-  <ul id="list">
 
+  <div class="all">
+  <h1>TODO LIST</h1>
+ <div class="line">
+  <input id="input">
+  <button id="button">enter</button> <b id="help">write something</b>
+ </div>
+  <div>
+  <ul id="list">
   </ul>
+  </div>
+  
+</div>
   <script>
 const input = document.querySelector("#input")
 const button = document.querySelector("#button")
